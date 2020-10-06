@@ -1,2 +1,0 @@
-# BRAND
-Project 29.09.2020
