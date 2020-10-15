@@ -272,6 +272,7 @@ a {
     background-color: #f8f3f4;
     background-size: cover;
     margin-top: -5px;
+    border-bottom: 1px solid #eaeaea;
 
     .secondary_pages_heading {
         font-family: "Lato";
@@ -1133,6 +1134,52 @@ a {
     }
 
     &_showcase_bottom_button_view_link:active {
+        opacity: 0.9;
+    }
+}
+
+.product_view {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 777px;
+    padding-top: 11px;
+    padding-bottom: 42px;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #f7f7f7;
+    background-size: cover;
+    background-position: center;
+
+    &_arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 47px;
+        height: 47px;
+        background-color: #d8d8d8;
+        box-sizing: border-box;
+    }
+
+    &_arrow_forward {
+        transform: scale(-1, -1);
+    }
+
+    &_arrow_img {
+        width: 8px;
+        height: 13px;
+    }
+
+    &_arrow_link {
+        line-height: 13px;
+        padding: 17px 18px 17px 21px;
+    }
+
+    &_arrow_link:hover {
+        opacity: 0.5;
+    }
+
+    &_arrow_link:active {
         opacity: 0.9;
     }
 }
