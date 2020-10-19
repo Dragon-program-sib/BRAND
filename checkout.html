@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRAND - FOR WOMAN - PRODUCT</title>
+    <title>BRAND - CHECKOUT</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d9f192ced5.js" crossorigin="anonymous"></script>
@@ -34,7 +34,7 @@
                 </form>
             </div>
             <div class="header_right">
-                <a class="header_cart" href="shopping cart.html"><img src="img/cart.png" alt="cart"></a>
+                <a class="header_cart" href="shopping-cart.html"><img src="img/cart.png" alt="cart"></a>
                 <a class="header_account" href="#">My Account</a>
                 <div class="account-container">
                     <img class="account_arrow" src="img/account-arrow.png" alt="account arrow">
@@ -45,9 +45,8 @@
             <ul class="top_menu">
                 <li class="top_menu_list"><a class="top_menu_link" href="index.html">Home</a></li>
                 <li class="top_menu_list"><a class="top_menu_link" href="product.html">Man</a></li>
-                <li class="top_menu_list"><a class="top_menu_link top_menu_link_active"
-                        href="single page.html">Woman</a></li>
-                <li class="top_menu_list"><a class="top_menu_link" href="single-page.html">Kids</a></li>
+                <li class="top_menu_list"><a class="top_menu_link" href="single-page.html">Woman</a></li>
+                <li class="top_menu_list"><a class="top_menu_link" href="#">Kids</a></li>
                 <li class="top_menu_list"><a class="top_menu_link" href="#">Accoseriese</a></li>
                 <li class="top_menu_list"><a class="top_menu_link" href="#">Featured</a></li>
                 <li class="top_menu_list"><a class="top_menu_link" href="#">Hot Deals</a></li>
@@ -62,118 +61,75 @@
             <a class="secondary_nav_header_link secondary_nav_header_active" href="#">New Arrivals</a>
         </nav>
     </div>
-    <div class="product_view">
-        <div class="product_view_arrow">
-            <a class="product_view_arrow_link" href="#"><img class="product_view_arrow_img" src="img/white-arrow.png"
-                    alt="arrow back"></a>
-        </div>
-        <img class="product_view_img" src="img/woman-product.jpg" alt="woman product">
-        <div class="product_view_arrow product_view_arrow_forward">
-            <a class="product_view_arrow_link" href="#"><img class="product_view_arrow_img" src="img/white-arrow.png"
-                    alt="arrow forward"></a>
-        </div>
-    </div>
-    <div class="single_product_description container">
-        <h3 class="single_product_description_collection_text">Woman collection</h3>
-        <div class="single_product_description_pagination">
-        </div>
-        <div class="single_product_description_pagination_active"></div>
-        <h2 class="single_product_description_heading">Moschino cheap and chic</h2>
-        <div class="single_product_description_stars_container">
-            <img class="single_product_description_stars" src="img/stars-medium.png" alt="rating">
-        </div>
-        <div class="single_product_description_text">
-            Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate
-            collaborative architectures before cutting-edge services. Completely visualize parallel core
-            competencies
-            rather than exceptional portals.
-        </div>
-        <div class="single_product_description_content">
-            <div class="single_product_description_text_bottom">
-                Material:<span class="single_product_description_text_bottom_right">Cotton</span>
-            </div>
-            <div class="single_product_description_text_bottom">
-                Designer:<span class="single_product_description_text_bottom_right">Binburhan</span>
+    <div class="checkout center">
+        <div class="checkout_item">
+            <div class="checkout_item_heading">
+                01. Shipping Address
             </div>
         </div>
-        <div class="single_product_description_price">
-            $561
-        </div>
-        <div class="single_product_description_line"></div>
-        <form class="single_product_description_form" action="GET">
-            <div class="single_product_description_form_content">
-                <h3 class="single_product_description_form_heading">Choose Color</h3>
-                <div class="single_product_description_form_details">
-                    <div class="single_product_description_form_details_color"></div>
-                    <p class="single_product_description_form_details_color_text">Red</p>
-                    <img class="single_product_description_form_details_img" src="img/arrow-down-thin.png"
-                        alt="arrow down">
+        <div class="checkout_item_box">
+            <form class="checkout_item_box_column1-form" action="#">
+                <h3 class="checkout_item_box_column1_form_text1">Check as a guest or register</h3>
+                <p class="checkout_item_box_column1_form_text2">Register with us for future convenience.</p>
+                <div class="checkout_item_box_column1_form_radio_block">
+                    <input class="checkout_item_box_column1_radio" type="radio">
+                    <label for="checkout_item_box_column1_radio">Checkout as guest</label>
+                </div><br>
+                <div class="checkout_item_box_column1_form_radio_block">
+                    <input class="checkout_item_box_column1_radio" type="radio" checked="checked">
+                    <label for="checkout_item_box_column1_radio">Register</label>
                 </div>
-            </div>
-            <div class="single_product_description_form_content">
-                <h3 class="single_product_description_form_heading">Choose Size</h3>
-                <div class="single_product_description_form_details">
-                    <p
-                        class="single_product_description_form_details_color_text single_product_description_form_details_color_text1">
-                        XXL</p>
-                    <img class="single_product_description_form_details_img" src="img/arrow-down-thin.png"
-                        alt="arrow down">
-                </div>
-            </div>
-            <div class="single_product_description_form_content">
-                <h3 class="single_product_description_form_heading">Quantity</h3>
-                <input class="single_product_description_form_details_input" type="text" placeholder="2">
-                </input>
-            </div>
-        </form>
-        <div class="single_product_description_button_add">
-            <a class="single_product_description_button_add_link" href="#"><img
-                    class="single_product_description_button_add_img" src="img/red-cart.png" alt="red cart">
-                Add to Cart</a>
+                <p class="checkout_item_box_column1_form_text3">Register and save time!</p>
+                <p class="checkout_item_box_column1_form_text2">Register with us for future convenience.</p>
+                <a class="checkout_item_box_column1_form_link" href="#">
+                    <p class="checkout_item_box_column1_form_text4">
+                        Fast and easy checkout.</p>
+                </a>
+                <a class="checkout_item_box_column1_form_link" href="#">
+                    <p class="checkout_item_box_column1_form_text4">
+                        Easy access to your order history and status.</p>
+                </a>
+                <input class="checkout_item_box_column1_form_submit" type="submit" value="Continue">
+            </form>
+            <form class="checkout_item_box_column2-form" action="#">
+                <h3 class="checkout_item_box_column2-form_text1">Already registed?</h3>
+                <p class="checkout_item_box_column2-form_text2">Please log in below.</p>
+                <p class="checkout_item_box_column2-form_input_heading">Email Address <span
+                        class="checkout_item_box_column2-form_input_heading_star">*</span></p>
+                <input class="checkout_item_box_column2-form_input" type="email"><br>
+                <p class="checkout_item_box_column2-form_input_heading">Password <span
+                        class="checkout_item_box_column2-form_input_heading_star">*</span></p>
+                <input class="checkout_item_box_column2-form_input" type="password">
+                <p class="checkout_item_box_column2-form_text3">* Required Fileds</p>
+                <input class="checkout_item_box_column2_form_submit" type="submit" value="Log in">
+            </form>
         </div>
-    </div>
-    <h2 class="single_product_bottom_heading_showcase">You may like also</h2>
-    <div class="single_product_bottom_showcase center">
-        <div class="single_product_bottom_showcase_product">
-            <a class="single_product_bottom_showcase_product_link" href="#"><img
-                    class="single_product_bottom_showcase_product_img" src="img/woman-showcase-1.jpg"
-                    alt="product-1"></a>
-            <div class="single_product_bottom_showcase_product_content">
-                <p class="single_product_bottom_showcase_product_name">Blaze Leggings</p>
-                <p class="single_product_bottom_showcase_product_price">$52.00<img
-                        class="single_product_bottom_showcase_product_stars" src="img/stars.jpg" alt="stars"></p>
+        <div class="checkout_item">
+            <div class="checkout_item_heading">
+                02. Billing Information
             </div>
         </div>
-        <div class="single_product_bottom_showcase_product">
-            <a class="single_product_bottom_showcase_product_link" href="#"><img
-                    class="single_product_bottom_showcase_product_img" src="img/woman-showcase-2.jpg"
-                    alt="product-2"></a>
-            <div class="single_product_bottom_showcase_product_content">
-                <p class="single_product_bottom_showcase_product_name">Alexa Sweater</p>
-                <p class="single_product_bottom_showcase_product_price">$52.00<img
-                        class="single_product_bottom_showcase_product_stars" src="img/stars.jpg" alt="stars"></p>
+        <div class="checkout_item">
+            <div class="checkout_item_heading">
+                03. Shipping Information
             </div>
         </div>
-        <div class="single_product_bottom_showcase_product">
-            <a class="single_product_bottom_showcase_product_link" href="#"><img
-                    class="single_product_bottom_showcase_product_img" src="img/woman-showcase-3.jpg"
-                    alt="product-3"></a>
-            <div class="single_product_bottom_showcase_product_content">
-                <p class="single_product_bottom_showcase_product_name">Agnes Top</p>
-                <p class="single_product_bottom_showcase_product_price">$52.00<img
-                        class="single_product_bottom_showcase_product_stars" src="img/stars.jpg" alt="stars"></p>
+        <div class="checkout_item">
+            <div class="checkout_item_heading">
+                04. Shipping Method
             </div>
         </div>
-        <div class="single_product_bottom_showcase_product">
-            <a class="single_product_bottom_showcase_product_link" href="#"><img
-                    class="single_product_bottom_showcase_product_img" src="img/woman-showcase-4.jpg"
-                    alt="product-4"></a>
-            <div class="single_product_bottom_showcase_product_content">
-                <p class="single_product_bottom_showcase_product_name">Sylva Sweater</p>
-                <p class="single_product_bottom_showcase_product_price">$52.00<img
-                        class="single_product_bottom_showcase_product_stars" src="img/stars.jpg" alt="stars"></p>
+        <div class="checkout_item">
+            <div class="checkout_item_heading">
+                05. Payment Method
             </div>
         </div>
+        <div class="checkout_item">
+            <div class="checkout_item_heading">
+                06. Order Review
+            </div>
+        </div>
+        <div class="checkout_item_line"></div>
     </div>
     <div class="reviews_container">
         <div class="reviews center">
@@ -218,7 +174,7 @@
                     <a href="index.html"><img src="img/logo.png" alt="logo"></a>
                     <span class="logo_text logo_text_footer_up">BRAN<span class="logo_text-letter">D</span></span>
                 </div>
-                <article class="footer_up_left_text">
+                <div class="footer_up_left_text">
                     <p>Objectively transition extensive data rather than cross functional
                         solutions. Monotonectally
                         syndicate multidisciplinary materials before go forward benefits.
@@ -230,7 +186,7 @@
                         Distinctively seize superior initiatives for wireless technologies.
                         Dynamically optimize.
                     </p>
-                </article>
+                </div>
             </div>
             <nav class="footer_up_right">
                 <div class="footer_up_right_nav">
@@ -259,9 +215,10 @@
                     <div class="footer_up_right_nav_column">
                         <p class="nav_column_heading">Shop Category</p>
                         <ul class="footer_up_bottom_menu">
-                            <li class="bottom_menu_list"><a class="bottom_menu_link" href="product.html">Men</a>
+                            <li class="bottom_menu_list"><a class="bottom_menu_link" href="product.html">Man</a>
                             </li>
-                            <li class="bottom_menu_list"><a class="bottom_menu_link" href="#">Women</a></li>
+                            <li class="bottom_menu_list"><a class="bottom_menu_link" href="single-page.html">Woman</a>
+                            </li>
                             <li class="bottom_menu_list"><a class="bottom_menu_link" href="#">Child</a></li>
                             <li class="bottom_menu_list"><a class="bottom_menu_link" href="#">Apparel</a></li>
                             <li class="bottom_menu_list"><a class="bottom_menu_link" href="#">Brows All</a></li>
