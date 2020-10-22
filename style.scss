@@ -62,18 +62,16 @@ a {
 }
 
 .logo_text {
-    font-family: "Lato Light";
     font-weight: 300;
     font-size: 27px;
     letter-spacing: 0.68px;
     line-height: 32px;
     color: #222222;
-    line-height: 20px;
+    line-height: 19px;
 }
 
 .logo_text-letter {
-    font-family: "Lato";
-    font-weight: 900;
+    font-weight: 800;
     color: #f16d7f;
     line-height: 19px;
 }
@@ -91,7 +89,6 @@ a {
     background-color: #cdcdcc;
     background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%);
     color: #222222;
-    font-family: Lato;
     font-size: 14px;
     font-weight: 300;
     line-height: 32px;
@@ -105,22 +102,40 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 85px;
+    width: 75px;
     height: 36px;
-    margin-top: -31px;
-}
+    cursor: pointer;
+    position: relative;
 
-.browse-active:hover {
-    opacity: 0.5;
-}
+    & summary {
+        display: block;
+        height: 36px;
+    }
 
-.browse-active:active {
-    opacity: 0.9;
-}
+    & summary::-webkit-details-marker {
+        display: none;
+    }
 
-.browse_img {
-    margin-left: 35px;
-    margin-bottom: 3px;
+    & summary::after {
+        content: url(img/browse-arrow.png);
+        margin-left: 10px;
+    }
+
+    &[open] > summary::after {
+        content: url(img/browse-arrow.png);
+        opacity: 0.7;
+    }
+
+    &[open] .drop {
+        display: flex;
+        position: absolute;
+        margin-top: -2px;
+        margin-left: -13px;
+    }
+
+    &[open] .drop_ledge {
+        margin-left: 65px;
+    }
 }
 
 .header_form-search {
@@ -169,18 +184,53 @@ a {
 }
 
 .header_cart {
+    position: relative;
     margin-top: 3px;
     margin-right: 26px;
-    transition: transform .7s ease-in-out;
-}
+    padding-top: 18px;
+    padding-bottom: 18px;
 
-.header_cart:hover {
-    opacity: 0.5;
-    transform: rotate(360deg);
-}
+    &:hover .drop {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 18px 15px;
+        margin-top: 17px;
+        margin-left: -23px;
+        box-sizing: border-box;
+    }
 
-.header_cart:active {
-    opacity: 0.9;
+    &:hover .drop_col {
+        width: 262px;
+        margin: 0px;
+        padding-bottom: 13px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ededed;
+        box-sizing: border-box;
+    }
+
+    &:hover .drop_ledge {
+        margin-top: -271px;
+        margin-left: -207px;
+    }
+
+    &:active {
+        opacity: 0.7;
+    }
+
+    &_text {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+    }
+
+    &_sum {
+        display: flex;
+        color: #222222;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
 }
 
 .header_account {
@@ -190,7 +240,6 @@ a {
     height: 38px;
     background-color: #f16d7f;
     color: #ffffff;
-    font-family: Lato;
     font-size: 15px;
     font-weight: 400;
     line-height: 32px;
@@ -238,6 +287,19 @@ a {
         list-style-type: none;
         margin-left: 7px;
         margin-right: 7px;
+        position: relative;
+
+        &_last .drop {
+            right: -5px;
+        }
+
+        &_last .drop_ledge {
+            margin-left: 813px;
+        }
+
+        &:hover .drop {
+            display: flex;
+        }
     }
     
     .top_menu_link {
@@ -261,6 +323,77 @@ a {
     
     .top_menu_link:active {
         opacity: 0.9;
+    }
+}
+
+.drop {
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-top: -5px;
+    padding: 0 5px 10px 5px;
+    border-top: 1px solid #e9e9e9;
+    box-shadow: 0 3px 3px #b2b2b2;
+    box-sizing: border-box;
+    z-index: 1;
+
+    &_col {
+        min-width: 235px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    &_h3 {
+        min-width: 235px;
+        border-bottom: 1px solid #e8e8e8;
+        color: #232323;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 0.35px;
+        margin-top: 10px;
+        margin-bottom: 13px;
+    }
+
+    &_list {
+        list-style-type: none;
+    }
+
+    &_link {
+        color: #646464;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.35px;
+        line-height: 28px;
+    }
+
+    &_link:hover {
+        opacity: 0.6;
+    }
+
+    &_link:active {
+        opacity: 0.6;
+    }
+
+    &_ledge {
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        background-color: #ffffff;
+        border-top: 1px solid #e9e9e9;
+        border-left: 1px solid #e9e9e9;
+        transform: rotate(45deg);
+        margin-top: -5px;
+        margin-left: 45px;
+    }
+
+    &_promo_img {
+        position: relative;
+        margin-top: 15px;
+        margin-left: -20px;
     }
 }
 
@@ -822,7 +955,6 @@ a {
 .product_price {
     display: inline-block;
     color: #f16d7f;
-    font-family: Lato;
     font-size: 14px;
     font-weight: 700;
     line-height: 15px;
@@ -931,7 +1063,6 @@ a {
     
     &_name {
         display: block;
-        font-family: Lato;
         color: #6f6e6e;
         font-size: 13px;
         font-weight: 400;
@@ -943,7 +1074,6 @@ a {
     &_price {
         display: inline-block;
         color: #f16d7f;
-        font-family: Lato;
         font-size: 15px;
         font-weight: 700;
         line-height: 14px;
@@ -1083,7 +1213,6 @@ a {
     }
 
     &_showcase_bottom_number_link {
-        font-family: Lato;
         color: #c4c4c4;
         font-size: 16px;
         font-weight: 600;
@@ -1122,7 +1251,6 @@ a {
         justify-content: center;
         align-items: center;
         color: #ef5b70;
-        font-family: Lato;
         font-size: 16px;
         font-weight: 600;
         line-height: 13px;
@@ -1450,7 +1578,6 @@ a {
 }
 
 .single_product_bottom_heading_showcase {
-    font-family: "Lato";
     color: #4d4d4d;
     font-size: 24px;
     font-weight: 800;
@@ -1704,7 +1831,6 @@ a {
         align-items: center;
         width: 514px;
         color: #222222;
-        font-family: Lato;
         font-size: 14px;
         font-weight: 600;
         line-height: 10px;
@@ -1722,7 +1848,6 @@ a {
         align-items: center;
         width: 624px;
         color: #222222;
-        font-family: Lato;
         font-size: 14px;
         font-weight: 600;
         line-height: 10px;
@@ -1769,9 +1894,8 @@ a {
         box-sizing: border-box;
     }
 
-    &_product_name {
+    &_product_name_link {
         color: #222222;
-        font-family: "Lato";
         font-size: 13px;
         font-weight: 400;
         text-transform: uppercase;
@@ -1779,8 +1903,15 @@ a {
         margin-bottom: 38px;
     }
 
+    &_product_name_link:hover {
+        opacity: 0.7;
+    }
+
+    &_product_name_link:active {
+        opacity: 0.9;
+    }
+
     &_product_text {
-        font-family: Lato;
         color: #575757;
         font-size: 13px;
         font-weight: 600;
@@ -1788,7 +1919,6 @@ a {
     }
 
     &_product_text2 {
-        font-family: "Lato Light";
         color: #6f6e6e;
         font-weight: 400;
         margin-left: 9px;
@@ -1828,7 +1958,6 @@ a {
         align-items: center;
         min-width: 60px;
         color: #656565;
-        font-family: Lato;
         font-size: 13px;
         font-weight: 400;
         box-sizing: border-box;
@@ -1838,7 +1967,6 @@ a {
         width: 54px;
         height: 30px;
         border: 1px solid #eaeaea;
-        font-family: Lato;
         text-align: center;
         box-sizing: border-box;
         padding-left: 5px;
@@ -1846,7 +1974,6 @@ a {
     }
 
     &_product_column_input:focus {
-        font-family: Lato;
         color: #656565;
 
     }
@@ -1854,6 +1981,7 @@ a {
     &_product_column_cancel_img {
         padding: 10px;
         margin-left: 10px;
+        cursor: pointer;
     }
 
     &_product_column_cancel_img:hover {
@@ -1894,7 +2022,6 @@ a {
         border: 1px solid #eaeaea;
         line-height: 12px;
         color: #4a4a4a;
-        font-family: Lato;
         font-size: 14px;
         font-weight: 700;
         text-transform: uppercase;
@@ -1922,10 +2049,10 @@ a {
     flex-direction: column;
     max-width: 355px;
     margin-bottom: 79px;
+    box-sizing: border-box;
 
     &_heading {
         color: #222222;
-        font-family: Lato;
         font-size: 16px;
         font-weight: 700;
         text-transform: uppercase;
@@ -1945,7 +2072,6 @@ a {
         height: 45px;
         border: 1px solid #eaeaea;
         color: #b1b1b1;
-        font-family: Lato;
         font-size: 13px;
         font-weight: 300;
         padding-left: 18px;
@@ -1960,7 +2086,6 @@ a {
 
     &_form_input::placeholder {
         color: #b1b1b9;
-        font-family: Lato;
         font-size: 13px;
         font-weight: 300;
     }
@@ -1984,7 +2109,6 @@ a {
         border: 1px solid #eaeaea;
         background-color: #ffffff;
         color: #4a4a4a;
-        font-family: Lato;
         font-size: 11px;
         font-weight: 700;
         text-transform: uppercase;
@@ -2003,7 +2127,6 @@ a {
 
     &_discount_text {
         color: #000000;
-        font-family: Lato;
         font-size: 14px;
         font-weight: 300;
         text-transform: none;
@@ -2022,10 +2145,10 @@ a {
     height: 214px;
     background-color: #f5f3f3;
     padding-right: 41px;
+    box-sizing: border-box;
 
     &_subTotal_text {
         color: #4a4a4a;
-        font-family: Lato;
         font-size: 11px;
         font-weight: 400;
         text-transform: uppercase;
@@ -2040,7 +2163,6 @@ a {
 
     &_grandTotal_text {
         color: #222222;
-        font-family: Lato;
         font-size: 16px;
         font-weight: 700;
         text-transform: uppercase;
@@ -2070,7 +2192,6 @@ a {
         height: 50px;
         background-color: #f16d7f;
         color: #ffffff;
-        font-family: Lato;
         font-size: 16px;
         font-weight: 700;
         text-transform: uppercase;
@@ -2123,7 +2244,6 @@ a {
 
     &_heading {
         color: #222222;
-        font-family: Lato;
         font-size: 16px;
         font-weight: 700;
         text-transform: uppercase;
@@ -2161,7 +2281,6 @@ a {
 
     &_box_column1_form_text2 {
         color: #b3b2b2;
-        font-family: Lato;
         font-size: 13px;
         font-weight: 400;
         line-height: 12px;
@@ -2181,7 +2300,6 @@ a {
 
     &_box_column1_radio {
         color: #222222;
-        font-family: Lato;
         font-size: 12px;
         font-weight: 400;
         text-transform: uppercase;
@@ -2191,7 +2309,6 @@ a {
 
     &_box_column1_form_text3 {
         color: #222222;
-        font-family: Lato;
         font-size: 13px;
         font-weight: 400;
         text-transform: uppercase;
@@ -2210,7 +2327,6 @@ a {
 
     &_box_column1_form_text4 {
         color: #b3b2b2;
-        font-family: Lato;
         font-size: 13px;
         font-weight: 400;
         line-height: 12px;
@@ -2233,7 +2349,6 @@ a {
         border: 1px solid #eaeaea;
         background-color: #ffffff;
         color: #4a4a4a;
-        font-family: Lato;
         font-size: 14px;
         font-weight: 700;
         text-transform: uppercase;
@@ -2260,7 +2375,6 @@ a {
 
     &_box_column2-form_text1 {
         color: #222222;
-        font-family: Lato;
         font-size: 13px;
         font-weight: 400;
         text-transform: uppercase;
@@ -2271,7 +2385,6 @@ a {
 
     &_box_column2-form_text2 {
         color: #b3b2b2;
-        font-family: Lato;
         font-size: 13px;
         font-weight: 400;
         line-height: 12px;
@@ -2295,7 +2408,6 @@ a {
 
     &_box_column2-form_input_heading {
         color: #222222;
-        font-family: Lato;
         font-size: 12px;
         font-weight: 400;
         line-height: 8px;
@@ -2325,7 +2437,6 @@ a {
         border: 1px solid #eaeaea;
         background-color: #ffffff;
         color: #4a4a4a;
-        font-family: Lato;
         font-size: 14px;
         font-weight: 700;
         text-transform: uppercase;
@@ -2391,7 +2502,6 @@ a {
         color: #fbfbfb;
         min-height: 37px;
         font-size: 14px;
-        font-style: normal;
         letter-spacing: 0.35px;
         font-weight: 300;
         line-height: 23.95px;
@@ -2432,8 +2542,8 @@ a {
     
     .reviews_left_content_img {
         display: inline-block;
-        width: 83px;
-        height: 83px;
+        width: 83px !important;
+        height: 83px !important;
         margin-right: 28px;
     }
     
@@ -2464,15 +2574,12 @@ a {
         font-weight: 700;
         line-height: 13px;
         margin-bottom: 5px;
-        letter-spacing: normal;
         opacity: 0.9;
     }
     
     .reviews_left_location {
-        font-family: "Lato Light";
         display: block;
         color: #222224;
-        font-style: normal;
         font-size: 12px;
         font-weight: 300;
         letter-spacing: 0.3px;
@@ -2561,7 +2668,6 @@ a {
     }
     
     .reviews_right_subscribe {
-        font-family: Lato;
         border-radius: 23px;
         color: #222224;
         background-color: #e1e1e1;
@@ -2583,7 +2689,6 @@ a {
     }
     
     .subscribe_button {
-        font-family: Lato;
         display: flex;
         justify-content: center;
         align-items: center;
