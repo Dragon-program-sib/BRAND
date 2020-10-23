@@ -59,22 +59,54 @@
                 </form>
             </div>
             <div class="header_right">
-                <a class="header_cart" href="shopping-cart.html">
-                    <img class="header_cart_img" src="img/cart.png" alt="cart">
+                <div class="header_cart">
+                    <a href="shopping-cart.html"><img class="header_cart_img" src="img/cart.png" alt="cart"></a>
                     <div class="drop">
                         <div class="drop_ledge"></div>
-                        <div class="drop_col">
-                            <img src="img/cart-drop1.jpg" alt="product">
-                        </div>
-                        <div class="drop_col">
-                            <img src="img/cart-drop2.jpg" alt="product">
-                        </div>
-                        <div class="header_cart_text">
-                            <p class="header_cart_sum">Total</p>
-                            <p class="header_cart_sum">$500.00</p>
-                        </div>
+                        <form class="header_cart_form" action="#">
+                            <div class="drop_col">
+                                <img src="img/cart-drop1.jpg" alt="product">
+                                <div class="header_cart_content">
+                                    <a class="header_cart_name_link" href="#">
+                                        <h3 class="header_cart_name">Rebox Zane</h3>
+                                    </a>
+                                    <div class="header_cart_stars"><img src="img/cart-stars.png" alt="stars"></div>
+                                    <p class="header_cart_parameters">1<span
+                                            class="header_cart_parameters_mark">x</span>$250
+                                    </p>
+                                    <img class="header_cart_cancel_img" src="img/сancel.png" alt="cancel">
+                                </div>
+                            </div>
+                            <div class="drop_col">
+                                <img src="img/cart-drop2.jpg" alt="product">
+                                <div class="header_cart_content">
+                                    <a class="header_cart_name_link" href="#">
+                                        <h3 class="header_cart_name">Rebox Zane</h3>
+                                    </a>
+                                    <div class="header_cart_stars"><img src="img/cart-stars.png" alt="stars"></div>
+                                    <p class="header_cart_parameters">1<span
+                                            class="header_cart_parameters_mark">x</span>$250
+                                    </p>
+                                    <img class="header_cart_cancel_img" src="img/сancel.png" alt="cancel">
+                                </div>
+                            </div>
+                            <div class="header_cart_text">
+                                <p class="header_cart_sum">Total</p>
+                                <p class="header_cart_sum">$500.00</p>
+                            </div>
+                            <div class="header_cart_button">
+                                <a class="header_cart_button_link header_cart_button_link_active" href="checkout.html">
+                                    Checkout
+                                </a>
+                            </div>
+                            <div class="header_cart_button">
+                                <a class="header_cart_button_link" href="shopping-cart.html">
+                                    Go to Cart
+                                </a>
+                            </div>
+                        </form>
                     </div>
-                </a>
+                </div>
                 <a class="header_account" href="#">My Account</a>
                 <div class="account-container">
                     <img class="account_arrow" src="img/account-arrow.png" alt="account arrow">
