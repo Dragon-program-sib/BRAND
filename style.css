@@ -9,6 +9,23 @@ body {
   height: 100%;
 }
 
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.top {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 a {
   text-decoration: none;
 }
@@ -445,14 +462,20 @@ a {
   padding-left: 19px;
   padding-right: 28px;
   border-radius: 3px;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .header_account:hover {
   opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .header_account:active {
   opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .account-container {
@@ -1061,6 +1084,13 @@ a {
   opacity: 0.9;
 }
 
+.main_promo_wrapper {
+  height: 614px;
+  background-color: #e8e8e8;
+  background-position: center;
+  background-size: cover;
+}
+
 .main_promo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1071,9 +1101,8 @@ a {
   height: 614px;
   background-color: #e8e8e8;
   background-image: url(img/promo1-main.png);
-  background-position: 71.5% -52px;
+  background-position: 1% -52px;
   background-repeat: no-repeat;
-  overflow: hidden;
   margin-top: -4px;
 }
 
@@ -1082,6 +1111,7 @@ a {
   margin-top: 224px;
   padding-left: 12px;
   line-height: 0px;
+  position: relative;
 }
 
 .promo_text1 {
@@ -1172,10 +1202,14 @@ a {
 
 .promo_section_category:hover {
   opacity: 0.8;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .promo_section_category:active {
   opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .section_text {
@@ -1626,6 +1660,8 @@ a {
   font-weight: 600;
   line-height: 13px;
   padding: 14.5px 45px 14.5px 45px;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .product_product_showcase_bottom_button_view_link:hover {
@@ -1715,9 +1751,6 @@ a {
   border: 1px solid #eaeaea;
   background-color: #ffffff;
   margin-top: -87px;
-  /*&_pagination_active:hover .single_product_description_stars {
-        display: block;
-    }*/
 }
 
 .single_product_description_collection_text {
@@ -2001,6 +2034,8 @@ a {
   font-family: Lato;
   font-size: 16px;
   font-weight: 700;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .single_product_description_button_add_link:hover {
@@ -2114,6 +2149,8 @@ a {
   min-height: 48px;
   margin-top: 25px;
   margin-bottom: 113px;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
 }
 
 .all_product_button:hover {
@@ -2557,6 +2594,8 @@ a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 63px;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .shopping_cart_control_button_cl_co_link:hover {
@@ -2682,6 +2721,8 @@ a {
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 3px;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .shopping_cart_column_form_submit:hover {
@@ -2778,6 +2819,8 @@ a {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .shopping_cart_execute_button_link:hover {
@@ -3027,6 +3070,8 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 79px;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .checkout_item_box_column1_form_submit:hover {
@@ -3127,6 +3172,8 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 79px;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .checkout_item_box_column2_form_submit:hover {
@@ -3250,8 +3297,8 @@ a {
 
 .reviews_container .reviews_left_content_img {
   display: inline-block;
-  width: 83px !important;
-  height: 83px !important;
+  min-width: 83px;
+  min-height: 83px;
   margin-right: 28px;
 }
 
@@ -3438,6 +3485,9 @@ a {
   font-weight: 400;
   letter-spacing: 0.35px;
   line-height: 10px;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  cursor: pointer;
 }
 
 .reviews_right .subscribe_button:hover {
@@ -3676,6 +3726,8 @@ a {
   padding-left: 11px;
   padding-right: 11px;
   margin-right: 8px;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
 }
 
 .footer_bottom .footer_icon:hover {
