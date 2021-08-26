@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRAND - SHOPPING CART</title>
+    <title>BRAND - CHECKOUT</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d9f192ced5.js" crossorigin="anonymous"></script>
@@ -17,7 +17,7 @@
                 <div class="header center">
                     <div class="header_left">
                         <a class="header_logo" href="index.html">
-                            <img class="header_logo_img" src="img/logo.png" alt="logo">
+                            <img class="header_logo_img" src="../src/assets/img/logo.png" alt="logo">
                         </a>
                         <span class="logo_text">BRAN<span class="logo_text-letter">D</span></span>
                         <form class="header_form" action="#">
@@ -64,43 +64,48 @@
                             <input class="header_form-search" type="text" placeholder="Search for Item...">
                             <div class="search-container">
                                 <button class="button_search">
-                                    <img src="img/search.png" alt="search">
+                                    <img src="../src/assets/img/search.png" alt="search">
                                 </button>
                             </div>
                         </form>
                     </div>
                     <div class="header_right">
                         <div class="header_cart">
-                            <a href="shopping-cart.html"><img class="header_cart_img" src="img/cart.png" alt="cart"></a>
+                            <a href="shopping-cart.html"><img class="header_cart_img" src="../src/assets/img/cart.png"
+                                    alt="cart"></a>
                             <div class="drop">
                                 <div class="drop_ledge"></div>
                                 <form class="header_cart_form" action="#">
                                     <div class="drop_col">
-                                        <img src="img/cart-drop1.jpg" alt="product">
+                                        <img src="../src/assets/img/cart-drop1.jpg" alt="product">
                                         <div class="header_cart_content">
                                             <a class="header_cart_name_link" href="#">
                                                 <h3 class="header_cart_name">Rebox Zane</h3>
                                             </a>
-                                            <div class="header_cart_stars"><img src="img/cart-stars.png" alt="stars">
+                                            <div class="header_cart_stars"><img src="../src/assets/img/cart-stars.png"
+                                                    alt="stars">
                                             </div>
                                             <p class="header_cart_parameters">1<span
                                                     class="header_cart_parameters_mark">x</span>$250
                                             </p>
-                                            <img class="header_cart_cancel_img" src="img/сancel.png" alt="cancel">
+                                            <img class="header_cart_cancel_img" src="../src/assets/img/сancel.png"
+                                                alt="cancel">
                                         </div>
                                     </div>
                                     <div class="drop_col">
-                                        <img src="img/cart-drop2.jpg" alt="product">
+                                        <img src="../src/assets/img/cart-drop2.jpg" alt="product">
                                         <div class="header_cart_content">
                                             <a class="header_cart_name_link" href="#">
                                                 <h3 class="header_cart_name">Rebox Zane</h3>
                                             </a>
-                                            <div class="header_cart_stars"><img src="img/cart-stars.png" alt="stars">
+                                            <div class="header_cart_stars"><img src="../src/assets/img/cart-stars.png"
+                                                    alt="stars">
                                             </div>
                                             <p class="header_cart_parameters">1<span
                                                     class="header_cart_parameters_mark">x</span>$250
                                             </p>
-                                            <img class="header_cart_cancel_img" src="img/сancel.png" alt="cancel">
+                                            <img class="header_cart_cancel_img" src="../src/assets/img/сancel.png"
+                                                alt="cancel">
                                         </div>
                                     </div>
                                     <div class="header_cart_text">
@@ -123,7 +128,7 @@
                         </div>
                         <a class="header_account" href="#">My Account</a>
                         <div class="account-container">
-                            <img class="account_arrow" src="img/account-arrow.png" alt="account arrow">
+                            <img class="account_arrow" src="../src/assets/img/account-arrow.png" alt="account arrow">
                         </div>
                     </div>
                 </div>
@@ -147,126 +152,82 @@
                     <a class="secondary_nav_header_link secondary_nav_header_active" href="#">New Arrivals</a>
                 </nav>
             </div>
-            <div class="shopping_cart center">
-                <div class="shopping_cart_details">Product Details</div>
-                <div class="shopping_cart_positions">
-                    <div class="shopping_cart_positions_column">Unite Price</div>
-                    <div class="shopping_cart_positions_column">Quantity</div>
-                    <div class="shopping_cart_positions_column">Shipping</div>
-                    <div class="shopping_cart_positions_column">Subtotal</div>
-                    <div class="shopping_cart_positions_column">Action</div>
-                </div>
-            </div>
-            <div class="shopping_cart_item container">
-                <img class="shopping_cart_item_img" src="img/Image-cart1.jpg" alt="product-1">
-                <div class="shopping_cart_content">
-                    <a href="#" class="shopping_cart_product_name_link">Mango People T-shirt</a>
-                    <div class="shopping_cart_product_text">
-                        <p>Color:<span class="shopping_cart_product_text2">Red</span></p>
-                        <p>Size:<span class="shopping_cart_product_text2">Xll</span></p>
+            <div class="checkout center">
+                <div class="checkout_item">
+                    <div class="checkout_item_heading">
+                        01. Shipping Address
                     </div>
                 </div>
-                <div class="shopping_cart_product_block">
-                    <div class="shopping_cart_product_column">$150</div>
-                    <div class="shopping_cart_product_column">
-                        <input class="shopping_cart_product_column_input" type="text" placeholder="2" maxlength="2">
-                    </div>
-                    <div class="shopping_cart_product_column">FREE</div>
-                    <div class="shopping_cart_product_column">$300</div>
-                    <div class="shopping_cart_product_column"><img class="shopping_cart_product_column_cancel_img"
-                            src="img/сancel.png" alt="cancel"></div>
-                </div>
-            </div>
-            <div class="shopping_cart_item container">
-                <img class="shopping_cart_item_img" src="img/Image-cart2.jpg" alt="product-2">
-                <div class="shopping_cart_content">
-                    <a href="#" class="shopping_cart_product_name_link">Mango People T-shirt</a>
-                    <div class="shopping_cart_product_text">
-                        <p>Color:<span class="shopping_cart_product_text2">Red</span></p>
-                        <p>Size:<span class="shopping_cart_product_text2">Xll</span></p>
-                    </div>
-                </div>
-                <div class="shopping_cart_product_block">
-                    <div class="shopping_cart_product_column">$150</div>
-                    <div class="shopping_cart_product_column">
-                        <input class="shopping_cart_product_column_input" type="text" placeholder="2" maxlength="2">
-                    </div>
-                    <div class="shopping_cart_product_column">FREE</div>
-                    <div class="shopping_cart_product_column">$300</div>
-                    <div class="shopping_cart_product_column"><img class="shopping_cart_product_column_cancel_img"
-                            src="img/сancel.png" alt="cancel"></div>
-                </div>
-            </div>
-            <div class="shopping_cart_item container">
-                <img class="shopping_cart_item_img" src="img/Image-cart3.jpg" alt="product-3">
-                <div class="shopping_cart_content">
-                    <a href="#" class="shopping_cart_product_name_link">Mango People T-shirt</a>
-                    <div class="shopping_cart_product_text">
-                        <p>Color:<span class="shopping_cart_product_text2">Red</span></p>
-                        <p>Size:<span class="shopping_cart_product_text2">Xll</span></p>
-                    </div>
-                </div>
-                <div class="shopping_cart_product_block">
-                    <div class="shopping_cart_product_column">$150</div>
-                    <div class="shopping_cart_product_column">
-                        <input class="shopping_cart_product_column_input" type="text" placeholder="2" maxlength="2">
-                    </div>
-                    <div class="shopping_cart_product_column">FREE</div>
-                    <div class="shopping_cart_product_column">$300</div>
-                    <div class="shopping_cart_product_column"><img class="shopping_cart_product_column_cancel_img"
-                            src="img/сancel.png" alt="cancel"></div>
-                </div>
-            </div>
-            <div class="shopping_cart_line container"></div>
-            <div class="shopping_cart_control center">
-                <a class="shopping_cart_control_button_cl_co_link" href="#">
-                    <div class="shopping_cart_control_button_cl_co">Clear Shopping Cart</div>
-                </a>
-                <a class="shopping_cart_control_button_cl_co_link" href="#">
-                    <div class="shopping_cart_control_button_cl_co">Continue Shopping</div>
-                </a>
-            </div>
-            <div class="shopping_cart_column_container center">
-                <div class="shopping_cart_column">
-                    <div class="shopping_cart_column_heading">
-                        Shipping Address
-                    </div>
-                    <form class="shopping_cart_column_form" action="#">
-                        <div class="shopping_cart_column_form_input">
-                            Bangladesh<img class="shopping_cart_column_form_input_arrow_img" src="img/arrow-cart.png"
-                                alt="arrow">
+                <div class="checkout_item_box">
+                    <form class="checkout_item_box_column1-form" action="#">
+                        <h3 class="checkout_item_box_column1_form_text1">Check as a guest or register</h3>
+                        <p class="checkout_item_box_column1_form_text2">Register with us for future convenience.</p>
+                        <div class="checkout_item_box_column1_form_radio_block">
+                            <input class="checkout_item_box_column1_radio" id="guest" type="radio" name="checkout"
+                                value="guest">
+                            <label for="guest">Checkout as guest</label>
+                            <input class="checkout_item_box_column1_radio" id="reg" type="radio" name="checkout"
+                                value="reg" checked="checked">
+                            <label for="reg">Register</label>
                         </div>
-                        <input class="shopping_cart_column_form_input" placeholder="State">
-                        <input class="shopping_cart_column_form_input" placeholder="Postcode / Zip">
-                        <input class="shopping_cart_column_form_submit" type="submit" value="Get a quote">
+                        <p class="checkout_item_box_column1_form_text3">Register and save time!</p>
+                        <p class="checkout_item_box_column1_form_text2">Register with us for future convenience.</p>
+                        <a class="checkout_item_box_column1_form_link" href="#">
+                            <p class="checkout_item_box_column1_form_text4">
+                                Fast and easy checkout.</p>
+                        </a>
+                        <a class="checkout_item_box_column1_form_link" href="#">
+                            <p class="checkout_item_box_column1_form_text4">
+                                Easy access to your order history and status.</p>
+                        </a>
+                        <input class="checkout_item_box_column1_form_submit" type="submit" value="Continue">
+                    </form>
+                    <form class="checkout_item_box_column2-form" action="#">
+                        <h3 class="checkout_item_box_column2-form_text1">Already registed?</h3>
+                        <p class="checkout_item_box_column2-form_text2">Please log in below.</p>
+                        <p class="checkout_item_box_column2-form_input_heading">Email Address <span
+                                class="checkout_item_box_column2-form_input_heading_star">*</span></p>
+                        <input class="checkout_item_box_column2-form_input" type="email"><br>
+                        <p class="checkout_item_box_column2-form_input_heading">Password <span
+                                class="checkout_item_box_column2-form_input_heading_star">*</span></p>
+                        <input class="checkout_item_box_column2-form_input" type="password">
+                        <p class="checkout_item_box_column2-form_text3">* Required Fileds</p>
+                        <input class="checkout_item_box_column2_form_submit" type="submit" value="Log in">
                     </form>
                 </div>
-                <div class="shopping_cart_column">
-                    <div class="shopping_cart_column_heading">
-                        Coupon Discount
+                <div class="checkout_item">
+                    <div class="checkout_item_heading">
+                        02. Billing Information
                     </div>
-                    <p class="shopping_cart_column_discount_text">Enter your coupon code if you have one.</p>
-                    <form class="shopping_cart_column_form" action="#">
-                        <input class="shopping_cart_column_form_input" placeholder="State">
-                        <input class="shopping_cart_column_form_submit" type="submit" value="Apply Coupon">
-                    </form>
                 </div>
-                <div class="shopping_cart_execute">
-                    <p class="shopping_cart_execute_subTotal_text">Sub total<span
-                            class="shopping_cart_execute_subTotal_text_sum">$900</span></p>
-                    <p class="shopping_cart_execute_grandTotal_text">Grand Total<span
-                            class="shopping_cart_execute_grandTotal_text_sum">$900</span></p>
-                    <div class="shopping_cart_execute_line"></div>
-                    <a class="shopping_cart_execute_button_link" href="checkout.html">
-                        <div class="shopping_cart_execute_button">Proceed to Checkout</div>
-                    </a>
+                <div class="checkout_item">
+                    <div class="checkout_item_heading">
+                        03. Shipping Information
+                    </div>
                 </div>
+                <div class="checkout_item">
+                    <div class="checkout_item_heading">
+                        04. Shipping Method
+                    </div>
+                </div>
+                <div class="checkout_item">
+                    <div class="checkout_item_heading">
+                        05. Payment Method
+                    </div>
+                </div>
+                <div class="checkout_item">
+                    <div class="checkout_item_heading">
+                        06. Order Review
+                    </div>
+                </div>
+                <div class="checkout_item_line"></div>
             </div>
             <div class="reviews_container">
                 <div class="reviews center">
                     <div class="reviews_left">
                         <div class="reviews_left_content">
-                            <img class="reviews_left_content_img" src="img/woman-face.png" alt="woman face">
+                            <img class="reviews_left_content_img" src="../src/assets/img/woman-face.png"
+                                alt="woman face">
                             <p class="reviews_left_text1">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
                                 pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium.”</p>
                         </div>
@@ -304,7 +265,7 @@
             <div class="footer_up center">
                 <div class="footer_up_left">
                     <div class="footer_up_logo">
-                        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                        <a href="index.html"><img src="../src/assets/img/logo.png" alt="logo"></a>
                         <span class="logo_text logo_text_footer_up">BRAN<span class="logo_text-letter">D</span></span>
                     </div>
                     <div class="footer_up_left_text">
