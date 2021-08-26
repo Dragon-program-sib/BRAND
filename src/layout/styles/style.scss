@@ -128,12 +128,12 @@ a {
     }
 
     & summary::after {
-        content: url(img/browse-arrow.png);
+        content: url(../../assets/img/browse-arrow.png);
         margin-left: 10px;
     }
 
     &[open] > summary::after {
-        content: url(img/browse-arrow.png);
+        content: url(../../assets/img/browse-arrow.png);
         opacity: 0.7;
     }
 
@@ -747,7 +747,7 @@ a {
         }
 
         &:checked + label::before {
-            background-image: url(img/angle-down-solid.svg);
+            background-image: url(../../assets/img/angle-down-solid.svg);
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -899,7 +899,7 @@ a {
     align-items: start;
     height: 614px;
     background-color: #e8e8e8;
-    background-image: url(img/promo1-main.png);
+    background-image: url(../../assets/img/promo1-main.png);
     background-position: 1% -52px;
     background-repeat: no-repeat;
     margin-top: -4px;
@@ -1874,7 +1874,7 @@ a {
     align-items: flex-start;
     width: 1140px;
     height: 529px;
-    background-image: url(img/winter-woman.jpg);
+    background-image: url(../../assets/img/winter-woman.jpg);
     background-repeat: no-repeat;
     background-position: left;
     margin-bottom: 97px;
@@ -2484,7 +2484,7 @@ a {
     }
 
     &_box_column1_radio:checked + label::before {
-        background-image: url(img/ellipse.png);
+        background-image: url(../../assets/img/ellipse.png);
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -2711,7 +2711,7 @@ a {
     display: flex;
     justify-content: center;
     height: 438px;
-    background-image: url(img/reviews_mask.png), url(img/reviews.jpg);
+    background-image: url(../../assets/img/reviews_mask.png), url(../../assets/img/reviews.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
