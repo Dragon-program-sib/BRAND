@@ -1376,7 +1376,16 @@ a {
   opacity: 0.9;
 }
 
+.product_product_cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 848px;
+  margin-left: 295px;
+}
+
 .product_product_showcase_bottom_button_view {
+  display: inline-block;
   min-width: 150px;
   height: 44px;
   border-radius: 3px;

@@ -1,14 +1,17 @@
-'use strict';
+"use strict";
+
+//export { titles, prices };
+//import { fetchItems } from './functions_catalog.js';
 
 let titles = [
-    'Mango People T-Shirt',
-    'Mango People Blouse',
-    'Mango People Jacket',
-    'Mango People Dress',
-    'Mango People Bathrobe',
-    'Mango People Suit',
-    'Mango People Trousers',
-    'Mango People Hoodie'
+    "Mango People T-Shirt",
+    "Mango People Blouse",
+    "Mango People Jacket",
+    "Mango People Dress",
+    "Mango People Bathrobe",
+    "Mango People Suit",
+    "Mango People Trousers",
+    "Mango People Hoodie"
 ];
 
 let prices = [52, 80, 200, 110, 50, 130, 90, 70];
@@ -25,7 +28,7 @@ const catalog = {
     },
 
     render() {
-        let catalogTemplate = '';
+        let catalogTemplate = "";
 
         this.items.forEach((item, index) => {
             catalogTemplate += createItemTemplate(item, index);
@@ -43,7 +46,7 @@ function fetchItems() {
 
     for (let i = 0; i < titles.length; i++) {
         items.push(createItem(i));
-    };
+    }
 
     return items;
 }
@@ -51,7 +54,7 @@ function fetchItems() {
 
 function createItem(ind) {
     return {
-        id: 'cat_' + ind,
+        id: "cat_" + ind,
         title: titles[ind],
         price: prices[ind]
     };
@@ -72,7 +75,8 @@ function createItemTemplate(item, index) {
                 <div class="product_button">
                     <a class="product_button_link" href="#">
                         <div class="product_button_text">
-                            <img class="product_cart_img" src="../src/assets/img/product-cart.png" alt="product cart">Add to Cart
+                            <img class="product_cart_img" src="../src/assets/img/product-cart.png" alt="product cart">
+                            Add to Cart
                         </div>
                     </a>
                 </div>

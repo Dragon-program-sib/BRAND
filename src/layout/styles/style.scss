@@ -1339,7 +1339,7 @@ a {
 
     &_showcase_bottom_number {
         display: flex;
-        justify-content: center;;
+        justify-content: center;
         align-items: center;
         text-align: center;
         color: #c4c4c4;
@@ -1391,7 +1391,16 @@ a {
         opacity: 0.9;
     }
 
+    &_cont {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 848px;
+        margin-left: 295px;
+    }
+
     &_showcase_bottom_button_view {
+        display: inline-block;
         min-width: 150px;
         height: 44px;
         border-radius: 3px;
