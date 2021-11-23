@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../src/layout/styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d9f192ced5.js" crossorigin="anonymous"></script>
-    <script src="../src/components/main_catalog.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -462,7 +462,8 @@
 <script src="../src/components/catalog_init.js"></script>
 <script src="../src/components/main_catalog.js"></script>
 <script>
-    let catalog = initCatalog(
+    let mainCatalogURL = '';
+    /*let catalog = initCatalog(
         [
             "Mango People T-Shirt",
             "Mango People Blouse",
@@ -475,7 +476,8 @@
         ],
         [52, 80, 200, 110, 50, 130, 90, 70],
         'main'
-    );
+    );*/
+    let catalog = initCatalog(mainCatalogURL);
     catalog.init();
 
 </script>

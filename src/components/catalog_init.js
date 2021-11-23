@@ -10,7 +10,7 @@ function createItemTemplate(item, index, type = 'index') {
     return temp;
 }
 
-function fetchItems(TITLES, PRICES) {
+/*function fetchItems(TITLES, PRICES) {
     let items = [];
 
     for (let i = 0; i < TITLES.length; i++) {
@@ -27,18 +27,29 @@ function createItem(ind, TITLES, PRICES) {
         title: TITLES[ind],
         price: PRICES[ind]
     };
-}
+}*/
 
-function initCatalog(titles, prices, type = 'index', container = 'catalog') {
-    let TITLES = titles;
-    let PRICES = prices;
+function initCatalog(url, type = 'index', container = 'catalog') {
+    // let TITLES = titles;
+    // let PRICES = prices;
     return {
         items: [],
         container: container,
 
-        init() {
+        /*init() {
             this.container = document.getElementById(this.container);
             this.items = fetchItems(TITLES, PRICES);
+            this.render();
+        },*/
+
+        // Asynchronous function.
+        async init() {
+            this.container = document.getElementById(this.container);
+            let response = await axios({
+                url: url,
+                type: 'GET'
+            });
+            this.items = response.data;
             this.render();
         },
 
