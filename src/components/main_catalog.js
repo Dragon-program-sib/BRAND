@@ -3,7 +3,7 @@
 //export { titles, prices };
 //import { fetchItems } from './functions_catalog.js';
 
-let titles = [
+/*let TITLES = [
     "Mango People T-Shirt",
     "Mango People Blouse",
     "Mango People Jacket",
@@ -14,7 +14,7 @@ let titles = [
     "Mango People Hoodie"
 ];
 
-let prices = [52, 80, 200, 110, 50, 130, 90, 70];
+let PRICES = [52, 80, 200, 110, 50, 130, 90, 70];
 
 
 const catalog = {
@@ -58,10 +58,12 @@ function createItem(ind) {
         title: titles[ind],
         price: prices[ind]
     };
-}
+}*/
+
+catalogTypes.main = createCatalogTemplateMain;
 
 
-function createItemTemplate(item, index) {
+function createCatalogTemplateMain(item, index) {
     let imgSrc = `../src/assets/img/main_catalog/product${index + 1}.jpg`;
 
     return `

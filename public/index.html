@@ -294,7 +294,7 @@
             <section>
                 <h2 class="featured_up">Featured Items</h2>
                 <h4 class="featured_down">Shop for items based on what we featured in this week.</h4>
-                <div class="product_showcase center" id="main_catalog">
+                <div class="product_showcase center" id="catalog">
                 </div>
             </section>
             <nav class="all_product_button center">
@@ -458,5 +458,26 @@
         </footer>
     </div>
 </body>
+
+<script src="../src/components/catalog_init.js"></script>
+<script src="../src/components/main_catalog.js"></script>
+<script>
+    let catalog = initCatalog(
+        [
+            "Mango People T-Shirt",
+            "Mango People Blouse",
+            "Mango People Jacket",
+            "Mango People Dress",
+            "Mango People Bathrobe",
+            "Mango People Suit",
+            "Mango People Trousers",
+            "Mango People Hoodie",
+        ],
+        [52, 80, 200, 110, 50, 130, 90, 70],
+        'main'
+    );
+    catalog.init();
+
+</script>
 
 </html>

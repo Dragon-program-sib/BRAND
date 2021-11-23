@@ -289,7 +289,7 @@
                 </div>
 
             </div>
-            <div class="product_product_showcase center" id="product_catalog">
+            <div class="product_product_showcase center" id="catalog">
             </div>
             <div class="product_product_cont center">
                 <div class="product_product_showcase_bottom_number_content">
@@ -459,5 +459,27 @@
         </footer>
     </div>
 </body>
+
+<script src="../src/components/catalog_init.js"></script>
+<script src="../src/components/product_catalog.js"></script>
+<script>
+    let catalog = initCatalog(
+        [
+            'Mango People Windbreaker',
+            'Mango People Cape',
+            'Mango People Jacket',
+            'Mango People T-Shirt',
+            'Mango People Hoodie',
+            'Mango People Tracksuit',
+            'Mango People Costume',
+            'Mango People Coat',
+            'Mango People T-Shirt'
+        ],
+        [100, 150, 200, 50, 80, 120, 170, 210, 55],
+        'product'
+    );
+    catalog.init();
+
+</script>
 
 </html>
