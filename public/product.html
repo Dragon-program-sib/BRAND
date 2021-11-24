@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d9f192ced5.js" crossorigin="anonymous"></script>
-    <script src="../src/components/product_catalog.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -463,7 +463,7 @@
 <script src="../src/components/catalog_init.js"></script>
 <script src="../src/components/product_catalog.js"></script>
 <script>
-    let productCatalogURL = '';
+    let productCatalogURL = 'https://raw.githubusercontent.com/Dragon-program-sib/static/main/product_catalog.json';
     /*let catalog = initCatalog(
         [
             'Mango People Windbreaker',
@@ -480,6 +480,7 @@
         'product'
     );*/
 
+    let catalog = initCatalog(productCatalogURL);
     catalog.init();
 
 </script>

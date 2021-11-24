@@ -34,7 +34,7 @@ function initCatalog(url, type = 'index', container = 'catalog') {
     // let PRICES = prices;
     return {
         items: [],
-        container: container,
+        container: container, // You can simply: container,
 
         /*init() {
             this.container = document.getElementById(this.container);
@@ -54,7 +54,7 @@ function initCatalog(url, type = 'index', container = 'catalog') {
         },
 
         render() {
-            let catalogTemplate = "";
+            let catalogTemplate = '';
 
             this.items.forEach((item, index) => {
                 catalogTemplate += createItemTemplate(item, index, type);

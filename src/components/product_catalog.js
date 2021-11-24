@@ -64,15 +64,15 @@ function createItem(ind) {
 catalogTypes.product = createCatalogTemplateProduct;
 
 
-function createCatalogTemplateProduct(item, index) {
-    let imgSrc = `../src/assets/img/product_catalog/prod-${index + 1}.jpg`;
+function createCatalogTemplateProduct(item) {
+    // let imgSrc = `../src/assets/img/product_catalog/prod-${index + 1}.jpg`;
 
     return `
         <div class="product_product">
-            <a class="product_product_link" href="#"><img class="product_product_img" src="${imgSrc}" alt="product-1"></a>
+            <a class="product_product_link" href="#"><img class="product_product_img" src="${item.productImg}" alt="product-1"></a>
             <div class="product_product_content">
-                <p class="product_product_name">${item.title}</p>
-                <p class="product_product_price">$${item.price}<img class="product_product_stars" src="../src/assets/img/stars.jpg" alt="stars"></p>
+                <p class="product_product_name">${item.productName}</p>
+                <p class="product_product_price">$${item.productPrice}<img class="product_product_stars" src="../src/assets/img/stars.jpg" alt="stars"></p>
             </div>
             <div class="product_product_active">
                 <div class="product_product_button">
