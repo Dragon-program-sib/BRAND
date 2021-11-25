@@ -61,12 +61,11 @@ function createItem(ind) {
     };
 }*/
 
-catalogTypes.product = createCatalogTemplateProduct;
+//catalogTypes.product = createCatalogTemplateProduct;
 
 
-function createCatalogTemplateProduct(item) {
+function catalogTypes(item) {
     // let imgSrc = `../src/assets/img/product_catalog/prod-${index + 1}.jpg`;
-
     return `
         <div class="product_product">
             <a class="product_product_link" href="#"><img class="product_product_img" src="${item.productImg}" alt="product-1"></a>

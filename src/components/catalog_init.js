@@ -1,12 +1,13 @@
 'use strict';
 
-const catalogTypes = {
-    // main: createCatalogTemplateMain,
-    // product: createCatalogTemplateProduct
-};
+/*const catalogTypes = {
+    main: createCatalogTemplateMain,
+    product: createCatalogTemplateProduct
+};*/
 
-function createItemTemplate(item, index, type = 'index') {
-    let temp = catalogTypes[type](item, index);
+function createItemTemplate(item, index) {
+    let temp = catalogTypes(item, index);
+
     return temp;
 }
 
@@ -29,7 +30,7 @@ function createItem(ind, TITLES, PRICES) {
     };
 }*/
 
-function initCatalog(url, type = 'index', container = 'catalog') {
+function initCatalog(url, type = 'catalogTypes', container = 'catalog') {
     // let TITLES = titles;
     // let PRICES = prices;
     return {

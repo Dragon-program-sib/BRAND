@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 export { fetchItems };
 import { titles, prices } from './main_catalog.js';
@@ -20,4 +20,4 @@ function createItem(ind) {
         title: titles[ind],
         price: prices[ind]
     };
-}
+}*/
