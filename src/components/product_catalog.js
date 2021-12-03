@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 //export { titles, prices };
 //import { fetchItems } from './functions_catalog.js';
@@ -63,32 +63,28 @@ function createItem(ind) {
 
 //catalogTypes.product = createCatalogTemplateProduct;
 
-
 function catalogTypes(item) {
     // let imgSrc = `../src/assets/img/product_catalog/prod-${index + 1}.jpg`;
     return `
         <div class="product_product">
-            <a class="product_product_link" href="#"><img class="product_product_img" src="${item.productImg}" alt="product-1"></a>
+            <a class="product_product_link" href="#"><img class="product_product_img" src="${item.productImg}" alt="product-1" /></a>
             <div class="product_product_content">
                 <p class="product_product_name">${item.productName}</p>
-                <p class="product_product_price">$${item.productPrice}<img class="product_product_stars" src="../src/assets/img/stars.jpg" alt="stars"></p>
+                <p class="product_product_price">$${item.productPrice}<img class="product_product_stars" src="../src/assets/img/stars.jpg" alt="stars" /></p>
             </div>
             <div class="product_product_active">
-                <div class="product_product_button">
-                    <a class="product_product_button_link" href="#">
-                        <div class="product_product_button_text">
-                            <img class="product_product_cart_img" src="../src/assets/img/product-cart.png" alt="product cart">
-                            Add to Cart
-                        </div>
-                    </a>
-                </div>
+                <button class="product_product_active__button" name="add">
+                    <img class="product_product_active__button__cart_img"
+                    src="../src/assets/img/product-cart.png" alt="product cart" />
+                    Add to Cart
+                </button>
                 <div class="product_product_button_update">
                     <a class="product_product_button_update_link" href="#">
-                    <img class="product_product_update_img" src="../src/assets/img/update.png" alt="update">
+                    <img class="product_product_update_img" src="../src/assets/img/update.png" alt="update" />
                     </a>
                 </div>
                 <div class="product_product_button_fav">
-                    <a class="product_product_button_fav_link" href="#"><img class="product_product_fav_img" src="../src/assets/img/favourites.png" alt="favourites">
+                    <a class="product_product_button_fav_link" href="#"><img class="product_product_fav_img" src="../src/assets/img/favourites.png" alt="favourites" />
                     </a>
                 </div>
             </div>

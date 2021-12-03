@@ -52,6 +52,15 @@ function initCatalog(url, type = 'catalogTypes', container = 'catalog') {
             });
             this.items = response.data;
             this.render();
+            this.handleEvents();
+        },
+
+        handleEvents() {
+            this.container.addEventListener('click', event => {
+                if (event.target.name === 'add') {
+                    console.log('Товар добавлен!');
+                }
+            });
         },
 
         render() {
@@ -62,6 +71,10 @@ function initCatalog(url, type = 'catalogTypes', container = 'catalog') {
             });
 
             this.container.innerHTML = catalogTemplate;
+        },
+
+        add(item) {
+            console.log('add ' + item.productName);
         }
     };
 }
