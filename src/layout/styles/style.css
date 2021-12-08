@@ -1131,10 +1131,10 @@ a {
   font-weight: 700;
   line-height: 10px;
   max-height: 37px;
-  min-width: 123px;
+  max-width: 125px;
   margin-top: 98px;
   margin-left: 70px;
-  padding: 7px 10px 7px 10px;
+  padding: 7px 9px 7px 9px;
   cursor: pointer;
   transition: 0.1s;
   background-color: transparent;

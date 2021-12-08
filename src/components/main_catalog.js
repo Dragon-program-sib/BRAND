@@ -60,9 +60,10 @@ function createItem(ind) {
     };
 }*/
 
-//catalogTypes.main = createCatalogTemplateMain;
+// const listTypes = {};
+listTypes.main = createCatalogTemplateMain;
 
-function catalogTypes(item) {
+function createCatalogTemplateMain(item) {
     // let imgSrc = `../src/assets/img/main_catalog/product${index + 1}.jpg`;
     return `
         <div class="product">

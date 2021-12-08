@@ -65,7 +65,7 @@
                             <input class="header_form-search" type="text" placeholder="Search for Item...">
                             <div class="search-container">
                                 <button class="button_search">
-                                    <img src="../src/assets/img/search.png" alt="search">
+                                    <img src="../src/assets/img/search.png" alt="search" />
                                 </button>
                             </div>
                         </form>
@@ -73,58 +73,28 @@
                     <div class="header_right">
                         <div class="header_cart">
                             <a href="shopping-cart.html"><img class="header_cart_img" src="../src/assets/img/cart.png"
-                                    alt="cart"></a>
+                                    alt="cart" /></a>
                             <div class="drop">
                                 <div class="drop_ledge"></div>
-                                <form class="header_cart_form" action="#">
-                                    <div class="drop_col">
-                                        <img src="../src/assets/img/cart-drop1.jpg" alt="product">
-                                        <div class="header_cart_content">
-                                            <a class="header_cart_name_link" href="#">
-                                                <h3 class="header_cart_name">Rebox Zane</h3>
-                                            </a>
-                                            <div class="header_cart_stars"><img src="../src/assets/img/cart-stars.png"
-                                                    alt="stars">
-                                            </div>
-                                            <p class="header_cart_parameters">1<span
-                                                    class="header_cart_parameters_mark">x</span>$250
-                                            </p>
-                                            <img class="header_cart_cancel_img" src="../src/assets/img/сancel.png"
-                                                alt="cancel">
-                                        </div>
-                                    </div>
-                                    <div class="drop_col">
-                                        <img src="../src/assets/img/cart-drop2.jpg" alt="product">
-                                        <div class="header_cart_content">
-                                            <a class="header_cart_name_link" href="#">
-                                                <h3 class="header_cart_name">Rebox Zane</h3>
-                                            </a>
-                                            <div class="header_cart_stars"><img src="../src/assets/img/cart-stars.png"
-                                                    alt="stars">
-                                            </div>
-                                            <p class="header_cart_parameters">1<span
-                                                    class="header_cart_parameters_mark">x</span>$250
-                                            </p>
-                                            <img class="header_cart_cancel_img" src="../src/assets/img/сancel.png"
-                                                alt="cancel">
-                                        </div>
-                                    </div>
-                                    <div class="header_cart_text">
-                                        <p class="header_cart_sum">Total</p>
-                                        <p class="header_cart_sum">$500.00</p>
-                                    </div>
-                                    <div class="header_cart_button">
-                                        <a class="header_cart_button_link header_cart_button_link_active"
-                                            href="checkout.html">
-                                            Checkout
-                                        </a>
-                                    </div>
-                                    <div class="header_cart_button">
-                                        <a class="header_cart_button_link" href="shopping-cart.html">
-                                            Go to Cart
-                                        </a>
-                                    </div>
-                                </form>
+                                <div class="header_cart_form" id="cart_items">
+
+                                </div>
+                                <div class="header_cart_text">
+                                    <p class="header_cart_sum">Total</p>
+                                    <p class="header_cart_sum">$<span id="cart_sum"></span></p>
+                                </div>
+                                <div class="header_cart_button">
+                                    <a class="header_cart_button_link header_cart_button_link_active"
+                                        href="checkout.html">
+                                        Checkout
+                                    </a>
+                                </div>
+                                <div class="header_cart_button">
+                                    <a class="header_cart_button_link" href="shopping-cart.html">
+                                        Go to Cart
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
                         <a class="header_account" href="#">My Account</a>
@@ -459,11 +429,19 @@
         </footer>
     </div>
 </body>
+<script>
+    const listTypes = {};
+    let cartURL = 'https://raw.githubusercontent.com/Dragon-program-sib/static/main/JSON/cart.json';
+    let mainCatalogURL = 'https://raw.githubusercontent.com/Dragon-program-sib/static/main/JSON/main_catalog.json';
 
+</script>
+
+<script src="../src/components/cart_init.js"></script>
+<script src="../src/components/cart.js"></script>
 <script src="../src/components/catalog_init.js"></script>
 <script src="../src/components/main_catalog.js"></script>
+
 <script>
-    let mainCatalogURL = 'https://raw.githubusercontent.com/Dragon-program-sib/static/main/JSON/main_catalog.json';
     /*let catalog = initCatalog(
         [
             "Mango People T-Shirt",
@@ -478,6 +456,9 @@
         [52, 80, 200, 110, 50, 130, 90, 70],
         'main'
     );*/
+    let cart = initCart(cartURL);
+    cart.init();
+
     let catalog = initCatalog(mainCatalogURL);
     catalog.init();
 

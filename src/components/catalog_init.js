@@ -1,12 +1,7 @@
 'use strict';
 
-/*const catalogTypes = {
-    main: createCatalogTemplateMain,
-    product: createCatalogTemplateProduct
-};*/
-
-function createItemTemplate(item, index) {
-    let temp = catalogTypes(item, index);
+function createItemTemplate(item, index, type = 'main') {
+    let temp = listTypes[type](item, index);
 
     return temp;
 }
@@ -30,12 +25,12 @@ function createItem(ind, TITLES, PRICES) {
     };
 }*/
 
-function initCatalog(url, type = 'catalogTypes', container = 'catalog') {
+function initCatalog(url, type = 'main', container = 'catalog') {
     // let TITLES = titles;
     // let PRICES = prices;
     return {
         items: [],
-        container: container, // You can simply: container,
+        container,
 
         /*init() {
             this.container = document.getElementById(this.container);
