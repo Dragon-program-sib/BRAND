@@ -19,19 +19,20 @@ function initCart(url, type = 'cart', container = 'cart_items') {
                 type: 'GET',
             });
             this.items = response.data.content;
-            this.render();
+            this._render();
             this.handleEvents();
         },
 
         handleEvents() {
             this.container.addEventListener('click', (event) => {
                 if (event.target.name === 'remove') {
-                    console.log('Товар удалён!');
+                    this._remove(event.target.dataset.id);
+                    // console.log('Товар удалён!');
                 }
             });
         },
 
-        render() {
+        _render() {
             let cartTemplate = '';
 
             this.items.forEach((item, index) => {
@@ -42,11 +43,37 @@ function initCart(url, type = 'cart', container = 'cart_items') {
         },
 
         add(item) {
-            console.log('add ' + item.productName);
+            let find = this.items.find(el => el.productId == item.productId);
+            if (find) {
+                find.amount++;
+                this._render();
+                //console.log(1); // ++
+            } else {
+                let newItem = Object.assign({}, item, {
+                    amount: 1
+                });
+                this.items.push(newItem);
+                this._render();
+                // console.log(2); // add
+            }
+            // console.log('add ' + item.productName);
         },
 
-        remove() {
-            console.log();
-        },
+        _remove(id) {
+            let find = this.items.find(el => el.productId == id);
+            if (find.amount > 1) {
+                find.amount--;
+                this._render();
+                //console.log(1); // ++
+            } else {
+                /*let newItem = Object.assign({}, item, {
+                    amount: 1
+                });*/
+                //this.items.push(newItem);
+                this.items.splice(this.items.indexOf(find), 1);
+                this._render();
+                // console.log();
+            }
+        }
     };
 }

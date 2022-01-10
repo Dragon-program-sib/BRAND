@@ -1,6 +1,6 @@
 'use strict';
 
-function createItemTemplate(item, index, type = 'main') {
+function createItemTemplate(item, index, type) {
     let temp = listTypes[type](item, index);
 
     return temp;
@@ -16,7 +16,6 @@ function createItemTemplate(item, index, type = 'main') {
     return items;
 }
 
-
 function createItem(ind, TITLES, PRICES) {
     return {
         id: 'cat_' + ind,
@@ -25,12 +24,13 @@ function createItem(ind, TITLES, PRICES) {
     };
 }*/
 
-function initCatalog(url, type = 'main', container = 'catalog') {
+function initCatalog(url, cart, type = 'main', container = 'catalog') {
     // let TITLES = titles;
     // let PRICES = prices;
     return {
         items: [],
         container,
+        cart: null,
 
         /*init() {
             this.container = document.getElementById(this.container);
@@ -38,27 +38,34 @@ function initCatalog(url, type = 'main', container = 'catalog') {
             this.render();
         },*/
 
-        // Asynchronous function.
         async init() {
+            this.cart = cart;
             this.container = document.getElementById(this.container);
             let response = await axios({
                 url: url,
                 type: 'GET'
             });
             this.items = response.data;
-            this.render();
+            this._render();
             this.handleEvents();
         },
 
         handleEvents() {
             this.container.addEventListener('click', event => {
                 if (event.target.name === 'add') {
-                    console.log('Товар добавлен!');
+                    let item = {
+                        productId: event.target.dataset.id,
+                        productImg: event.target.dataset.img,
+                        productName: event.target.dataset.name,
+                        productPrice: event.target.dataset.price,
+                    };
+                    this.add(item);
+                    // console.log('Товар добавлен!');
                 }
             });
         },
 
-        render() {
+        _render() {
             let catalogTemplate = '';
 
             this.items.forEach((item, index) => {
@@ -69,7 +76,8 @@ function initCatalog(url, type = 'main', container = 'catalog') {
         },
 
         add(item) {
-            console.log('add ' + item.productName);
+            this.cart.add(item);
+            // console.log('add ' + item.productName);
         }
     };
 }

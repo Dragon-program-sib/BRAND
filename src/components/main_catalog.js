@@ -69,11 +69,16 @@ function createCatalogTemplateMain(item) {
         <div class="product">
             <a class="product_link" href="#"><img class="product_img" src="${item.productImg}" alt="product-1" /></a>
             <div class="product_content">
-                <p class = "product_name">${item.productName}</p>
+                <p class="product_name">${item.productName}</p>
                 <p class="product_price">$${item.productPrice}<img class="product_stars"src="../src/assets/img/stars.jpg" alt="stars" /></p>
             </div>
             <div class="product_active">
-                <button class="product_active__button" name="add">
+                <button class="product_active__button"
+                name="add"
+                    data-id="${item.productId}" 
+                    data-img="${item.productImg}" 
+                    data-img="${item.productImg}" data-name="${item.productName}" data-price="${item.productPrice}"
+                >
                     <img class="product_active__button__cart_img"
                     src="../src/assets/img/product-cart.png"
                     alt="product cart">
