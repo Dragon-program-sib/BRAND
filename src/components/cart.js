@@ -7,7 +7,7 @@ function createCartTemplateIndex(item) {
 
     return `
         <div class="drop_col">
-            <img src="${item.productImg}" alt="product" />
+            <img class="header_cart__img" src="${item.productImg}" alt="product" />
             <div class="header_cart_content">
                 <a class="header_cart_name_link" href="#">
                     <h3 class="header_cart_name">${item.productName}</h3>
